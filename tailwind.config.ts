@@ -21,7 +21,8 @@ const config = {
       colors: {
         'black-background': '#1b1b1b',
         'white-background': '#ffffff',
-        'yellow-general': '#f5b754'
+        'yellow-general': '#f5b754',
+        'light-gray': '#f2f2f2'
       },
     },
   },
