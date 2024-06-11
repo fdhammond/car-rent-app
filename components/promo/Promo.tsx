@@ -36,7 +36,7 @@ export default function Promo () {
                         <p className="text-sm text-gray-600">Economy Cars</p>
                     </div>
                     <div className="mt-4">
-                        <BiggerButton text="Read More" textColor="text-black" backgroundColor="bg-yellow-general" showArrowIcon={true} showWhatsappIcon={false} bgColorOnHover="hover:bg-black" textColorOnHover="text-white"/>
+                        <BiggerButton text="Read More" backgroundColor="bg-yellow-general" showArrowIcon={true} showWhatsappIcon={false} bgColorOnHover="hover:bg-black" textColorOnHover="hover:text-white"/>
                     </div>
                 </div>
                 <div className="w-full md:max-w-[476px] max-h-[476px] md:ml-[100px] mt-8">

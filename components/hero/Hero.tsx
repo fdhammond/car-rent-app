@@ -102,8 +102,7 @@ export default function Hero() {
                   textColorOnHover="text-black"
                 />
                 <BiggerButton text="Rent Now" textColor="text-white"
-                  showArrowIcon={true} iconSize='text-[10px]' bgColorOnHover="hover:bg-yellow-general hover:border-yellow-general"
-                  textColorOnHover="text-black"
+                  showArrowIcon={true} iconSize='text-[10px]' bgColorOnHover="hover:bg-yellow-general"
                 />
               </motion.div>
             </div>
