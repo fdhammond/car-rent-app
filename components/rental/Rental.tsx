@@ -1,27 +1,18 @@
 'use client'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import ParallaxSection from "../ui/ParallaxSection";
 
 export default function Rental() {
     return (
-        <div className="w-full">
-            <Parallax pages={1}>
-                <ParallaxLayer
-                    offset={0}
-                    speed={0.5} // Adjust the speed as needed to achieve the desired parallax effect
-                    style={{
-                        backgroundImage: 'url(https://duruthemes.com/demo/html/renax/light/img/slider/2.jpg)',
-                        backgroundSize: 'cover',
-                        maxHeight: '440px',
-                        backgroundPosition: 'center',
-                        height: '100vh', // Set the height to fill the viewport
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                    }}
-                >
-                    <h1 className='text-center text-[90px] font-bold text-black'>Hello</h1>
-                </ParallaxLayer>
-            </Parallax>
-        </div>
+        <>
+            <ParallaxSection
+                parallaxHeight="h-[440px]"
+                parallaxBackgroundUrl="https://utfs.io/f/16adb06e-9196-47a3-8b59-98dc0fef8ac9-23tg.jpg"
+            >
+                <div className="flex flex-col justify-center items-center w-full">
+                    <p className="text-yellow-general font-[300] text-14 tracking-[6px] uppercase mb-4">Rent now</p>
+                    <h2 className="text-4xl font-[700] text-white">Book Auto Rental</h2>
+                </div>
+            </ParallaxSection>
+        </>
     );
 }
