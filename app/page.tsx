@@ -12,9 +12,6 @@ export default function Home() {
       <Promo />
       <WhatWeDo />
       <Rental />
-      <WhatWeDo />
-      <WhatWeDo />
-
     </div>
   );
 }
