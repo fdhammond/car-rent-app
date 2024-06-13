@@ -1,11 +1,12 @@
 'use client'
 // import Swiper core and required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/pagination';
 import './styles.css'
 export default function WhatWeDo() {
 
@@ -29,8 +30,12 @@ export default function WhatWeDo() {
                 </div>
                 <div className="flex justify-between items-center align-middle w-full overflow-x-hidden md:px-80 px-24 mt-12">
                     <Swiper
-                    pagination={true}
-                    modules={[Pagination]}
+                        pagination={{
+                            dynamicBullets: true,
+                            clickable: true
+                        }}
+                    className="swiper-pagination-custom"
+                    modules={[Pagination, Navigation]}
                     spaceBetween={30}
                     loop={true}
                     breakpoints={{
@@ -41,7 +46,6 @@ export default function WhatWeDo() {
                             slidesPerView: 3,
                         },
                     }}
-                    onSwiper={(swiper) => console.log(swiper)}
                     >
                         {
                             services.map((service, index) => (

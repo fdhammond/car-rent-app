@@ -3,6 +3,7 @@ import Hero from "@/components/hero/Hero";
 import Promo from "@/components/promo/Promo";
 import WhatWeDo from "@/components/whatwedo/WhatWeDo";
 import Rental from "@/components/rental/Rental";
+import CarFleet from "@/components/carFleet/CarFleet";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Promo />
       <WhatWeDo />
       <Rental />
+      <CarFleet/>
     </div>
   );
 }

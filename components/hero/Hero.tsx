@@ -28,7 +28,7 @@ export default function Hero() {
       price: "$600"
     },
     {
-      name: "Bugatti Mistral W16",
+      name: "Rolls Royce Cullinan",
       imageUrl: "https://utfs.io/f/863410f4-3d86-4592-9b28-46e31004471d-17l.jpg",
       price: "$900"
     },
@@ -102,7 +102,7 @@ export default function Hero() {
                   textColorOnHover="text-black"
                 />
                 <BiggerButton text="Rent Now" textColor="text-white"
-                  showArrowIcon={true} iconSize='text-[10px]' bgColorOnHover="hover:bg-yellow-general"
+                  showArrowIcon={true} iconSize='text-[10px]' bgColorOnHover="hover:bg-yellow-general hover:border-yellow-general"
                 />
               </motion.div>
             </div>

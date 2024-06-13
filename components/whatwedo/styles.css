@@ -1,0 +1,12 @@
+/* Custom styles for Swiper pagination */
+.swiper-pagination-bullets {
+    position: relative;
+    margin-top: 24px;
+}
+.swiper-pagination-custom .swiper-pagination-bullet {
+    @apply bg-gray-700 w-4 h-4 mx-1; /* Adjust the color, size, and spacing of the bullets */
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+    @apply bg-yellow-general; /* Adjust the color of the active bullet */
+}
