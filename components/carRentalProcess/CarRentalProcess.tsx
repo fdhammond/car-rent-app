@@ -11,6 +11,7 @@ export default function CarRentalProcess() {
         { topTitle: "Come In Contact", paragraph: "Our advisor team is ready to help you with the booking process or any questions.", order: "02." },
         { topTitle: "Enjoy Driving", paragraph: "Receive the key and enjoy your car. We treat all our cars with respect.", order: "03." },
     ]
+
     return (
         <div className="py-12 md:py-[120px]">
             <SectionTitle
