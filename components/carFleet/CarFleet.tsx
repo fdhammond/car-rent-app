@@ -6,6 +6,7 @@ import { GiCarDoor } from "react-icons/gi";
 import { TbManualGearboxFilled } from "react-icons/tb";
 import { LuBaggageClaim } from "react-icons/lu";
 import { IoMdPerson } from "react-icons/io";
+import SectionTitle from '../ui/SectionTitle';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -72,10 +73,11 @@ export default function CarFleet() {
 
     return (
         <div className="py-[120px]">
-            <div className="flex flex-col justify-center items-center w-full">
-                <p className="text-yellow-general font-[300] tracking-[6px] uppercase mb-4 text-[12px]">Select your car</p>
-                <h2 className="text-4xl font-[700] text-yellow-general"><span className="text-black">Luxury</span> Car Fleet</h2>
-            </div>
+            <SectionTitle
+                topTitle="Select your car"
+                bottomTitleBlack="Luxury"
+                bottomTitleYellow="Car Fleet"
+            />
             <div className='my-12 flex justify-center align-middle items-center'>
                 <Swiper
                     centeredSlides={true}

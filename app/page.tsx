@@ -4,6 +4,7 @@ import Promo from "@/components/promo/Promo";
 import WhatWeDo from "@/components/whatwedo/WhatWeDo";
 import Rental from "@/components/rental/Rental";
 import CarFleet from "@/components/carFleet/CarFleet";
+import RentalCarServices from "@/components/rentalCarServices/RentalCarServices";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <Promo />
       <WhatWeDo />
       <Rental />
-      <CarFleet/>
+      <CarFleet />
+      <RentalCarServices />
     </div>
   );
 }
