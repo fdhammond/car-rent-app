@@ -5,6 +5,7 @@ import WhatWeDo from "@/components/whatwedo/WhatWeDo";
 import Rental from "@/components/rental/Rental";
 import CarFleet from "@/components/carFleet/CarFleet";
 import RentalCarServices from "@/components/rentalCarServices/RentalCarServices";
+import CarRentalProcess from "@/components/carRentalProcess/CarRentalProcess";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Rental />
       <CarFleet />
       <RentalCarServices />
+      <CarRentalProcess />
     </div>
   );
 }
