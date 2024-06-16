@@ -22,7 +22,6 @@ function CustomDropdown({ options, onSelect, defaultText }: CustomDropDownProps)
         onSelect(option);
     };
 
-    // Use custom hook to handle click outside
     useClickOutside(dropdownRef, () => setIsOpen(false));
 
     return (
@@ -47,7 +46,7 @@ function CustomDropdown({ options, onSelect, defaultText }: CustomDropDownProps)
                     {options.map((option) => (
                         <div
                             key={option}
-                            className="text-gray-400 hover:bg-yellow-general hover:text-black cursor-pointer"
+                            className="text-gray-400 hover:bg-yellow-general hover:text-black cursor-pointer text-center py-2"
                             onClick={() => handleSelect(option)}
                         >
                             {option}
@@ -64,12 +63,11 @@ export default function PopupForm({ isVisible, onClose }: PopupFormProps) {
     const locations = ['Los Angeles', 'New York', 'San Francisco', 'Miami'];
     const popupRef = useRef<HTMLDivElement>(null);
 
-    // Use custom hook to handle click outside
     useClickOutside(popupRef, onClose);
 
     return isVisible ? (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center max-w-full max-h-full">
-            <div ref={popupRef} className="bg-[#1b1b1b] text-gray-600 rounded-2xl shadow-lg md:w-[800px] md:h-[600px] w-full relative">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center max-w-full md:max-h-full">
+            <div ref={popupRef} className="bg-[#1b1b1b] text-gray-600 rounded-2xl shadow-lg md:w-[800px] md:h-auto w-full relative">
                 <div className="bg-yellow-general py-4 px-8 rounded-t-2xl">
                     <h3 className="text-2xl text-black font-bold">Booking Form</h3>
                 </div>
@@ -92,8 +90,8 @@ export default function PopupForm({ isVisible, onClose }: PopupFormProps) {
                         />
                     </svg>
                 </button>
-                <form className='py-6 md:py-[60px] md:px-[32px]'>
-                    <div className="grid grid-cols-2 gap-4 mb-4">
+                <form className='py-6 md:py-[60px] md:px-[32px] px-[24px]'>
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                         <div>
                             <input
                                 className="rounded-[30px] shadow appearance-none border w-full p-[20px] text-[14px] font-[300] text-gray-400 bg-[#222] border-[#222] leading-tight focus:outline-none focus:shadow-outline"
@@ -111,7 +109,7 @@ export default function PopupForm({ isVisible, onClose }: PopupFormProps) {
                             />
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                         <div>
                             <input
                                 className="rounded-[30px] shadow appearance-none border w-full p-[20px] text-[14px] text-gray-400 bg-[#222] border-[#222] leading-tight focus:outline-none focus:shadow-outline"
@@ -121,15 +119,15 @@ export default function PopupForm({ isVisible, onClose }: PopupFormProps) {
                             />
                         </div>
                         <div>
-                            <CustomDropdown options={carTypes} onSelect={(option) => console.log(option)} defaultText="Select Car Type" />
+                            <CustomDropdown options={carTypes} onSelect={(option) => option} defaultText="Select Car Type" />
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mb-4">
                         <div>
-                            <CustomDropdown options={locations} onSelect={(option) => console.log(option)} defaultText="Pickup Location" />
+                            <CustomDropdown options={locations} onSelect={(option) => option} defaultText="Pickup Location" />
                         </div>
                         <div>
-                            <CustomDropdown options={locations} onSelect={(option) => console.log(option)} defaultText="Dropoff Location" />
+                            <CustomDropdown options={locations} onSelect={(option) => option} defaultText="Dropoff Location" />
                         </div>
                     </div>
                     <div className="mb-4">
