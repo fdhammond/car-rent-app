@@ -10,7 +10,7 @@ import InterestedInRental from "@/components/interestedInRental/InterestedInRent
 
 export default function Home() {
   return (
-    <div className="absolute w-full h-screen">
+    <div className="w-full">
       <Navbar />
       <Hero />
       <Promo />

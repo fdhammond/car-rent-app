@@ -26,8 +26,8 @@
         background-color: #f5b754;
         color: black;
         border-radius: 100%;
-        width: 55px;
-        height: 55px;
+        width: 45px !important;
+        height: 45px !important;
     }
 
 .swiper-button-next:hover,
@@ -53,7 +53,7 @@
 
 .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
     .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
-    font-size: 12px;
+    font-size: 12px !important;
     color: white;
 }
 
