@@ -1,0 +1,15 @@
+.mySwiper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b1b1b;
+    padding: 24px 0;
+    width: 100%; /* Ensure full width */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Ensure slides are centered horizontally */
+    align-items: center; /* Ensure slides are centered vertically */
+    margin: 0 auto; /* Center slides within Swiper container */
+}

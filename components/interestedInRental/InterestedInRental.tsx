@@ -1,8 +1,45 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import ParallaxSection from "../ui/ParallaxSection";
 import BiggerButton from "../ui/BiggerButton";
 import PopupForm from './PopUpForm';
+// Import Swiper React components
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper-bundle.css';
+import 'swiper/css/pagination';
+import 'swiper/css';
+import './styles.css';
+
+const carBrands = [
+    {
+    image: 'https://utfs.io/f/a9f44537-48d3-46ca-89f4-d68b956f7cb3-11hh.png'
+    },
+    {
+    image: 'https://utfs.io/f/caa4bdd8-2bfe-4caa-bc5a-35b3de348d67-1286.png'
+    },
+    {
+    image: 'https://utfs.io/f/edd3a877-a720-4170-be36-ad0d70041350-12yv.png'
+    },
+    {
+    image: 'https://utfs.io/f/195d42cc-642c-4cc7-9b2c-d59ff9d1800a-13pk.png'
+    },
+    {
+    image: 'https://utfs.io/f/46938d3a-3843-49b2-9627-b8314e9f9d9a-14g9.png'
+    },
+    {
+    image: 'https://utfs.io/f/b91d743d-ae28-4f01-9289-05acfa35069c-156y.png'
+    },
+    {
+    image: 'https://utfs.io/f/95252edf-3716-4730-98a3-b4c323056524-15xn.png'
+    },
+    {
+    image: 'https://utfs.io/f/dccb7979-1813-4fc3-9163-333fd502d57a-16oc.png'
+    },
+]
 
 export default function InterestedInRental() {
     const [isPopupVisible, setIsPopupVisible] = useState(false);
@@ -50,7 +87,32 @@ export default function InterestedInRental() {
                 </div>
             </ParallaxSection>
 
+            <div className="mySwiper">
+                <Swiper
+                    breakpoints={{
+                        420: { slidesPerView: 2 },
+                        1024: { slidesPerView: 6 },
+                    }}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Autoplay]}
+                >
+                    {carBrands.map((brand, index) => (
+                        <SwiperSlide key={index}>
+                            <div className="w-[170px] h-[85px]">
+                                <Image src={brand.image} width={300} height={300} alt={`slide ${index + 1}`} />
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
+
             <PopupForm isVisible={isPopupVisible} onClose={handleClosePopup} />
+
         </>
     );
 }
