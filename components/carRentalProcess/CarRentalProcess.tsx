@@ -1,7 +1,6 @@
 'use client'
 import SectionTitle from "../ui/SectionTitle"
-import { Pagination, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { MdSecurityUpdateWarning } from "react-icons/md";
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -37,6 +36,10 @@ export default function CarRentalProcess() {
                         </div>
                     ))
                 }
+            </div>
+            <div className="text-center mt-8 flex justify-center md:items-center items-start px-[12px]">
+                <MdSecurityUpdateWarning className="text-yellow-general w-6 h-6" />
+                <p className="md:pl-4 pl-2 text-[14px] font-normal text-gray-500">If you&apos;ve never rented a car before, we&apos;ll guide you through the process.</p>
             </div>
         </div>
     )
