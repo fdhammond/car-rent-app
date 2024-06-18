@@ -20,8 +20,6 @@ export default function Home() {
       <RentalCarServices />
       <CarRentalProcess />
       <InterestedInRental />
-      <CarRentalProcess />
-
     </div>
   );
 }
