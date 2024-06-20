@@ -118,7 +118,7 @@ export default function CarFleet() {
                                             </div>
                                             <div className='flex justify-center items-center'>
                                             <button className='flex justify-center items-center text-center text-[14px] text-black-background bg-yellow-general rounded-[20px] px-[14px] py-[21px] w-[86px] h-[50px]'>
-                                                <Link href={`/cars/${car.name}`}>
+                                                <Link href={`/cardetail`}>
                                                     Details
                                                 </Link>
                                             </button>
