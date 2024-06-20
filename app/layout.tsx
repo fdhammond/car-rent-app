@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Outfit } from 'next/font/google'
 import Footer from "@/components/footer/Footer";
+import InterestedInRental from "@/components/interestedInRental/InterestedInRental";
+import Navbar from "@/components/Navbar";
 
 const outfit = Outfit({
   weight: ['400', '500', '700'],
@@ -28,7 +30,9 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={`${outfit.className} overflow-x-hidden`}>
+        <Navbar />
         {children}
+        <InterestedInRental />
         <Footer />
       </body>
     </html>

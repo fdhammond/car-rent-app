@@ -6,7 +6,9 @@ import { GiCarDoor } from "react-icons/gi";
 import { TbManualGearboxFilled } from "react-icons/tb";
 import { LuBaggageClaim } from "react-icons/lu";
 import { IoMdPerson } from "react-icons/io";
+import { FaWhatsapp } from "react-icons/fa";
 import SectionTitle from '../ui/SectionTitle';
+import Link from 'next/link';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -115,7 +117,11 @@ export default function CarFleet() {
                                                 </div>
                                             </div>
                                             <div className='flex justify-center items-center'>
-                                                <button className='flex justify-center items-center text-center text-[14px] text-black-background bg-yellow-general rounded-[20px] px-[14px] py-[21px] w-[86px] h-[50px]'>Details</button>
+                                            <button className='flex justify-center items-center text-center text-[14px] text-black-background bg-yellow-general rounded-[20px] px-[14px] py-[21px] w-[86px] h-[50px]'>
+                                                <Link href={`/cars/${car.name}`}>
+                                                    Details
+                                                </Link>
+                                            </button>
                                                 <div className='flex flex-col justify-center items-center ml-[15px]'>
                                                     <span className='text-[22px] font-bold text-yellow-general'>{car.price}</span>
                                                     <span className='text-[14px] text-gray-400'>/day</span>

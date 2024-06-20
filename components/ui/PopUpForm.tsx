@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useClickOutside } from '@/hooks/useClickOutside';
 interface CustomDropDownProps {
     options: string[];
@@ -66,7 +66,7 @@ export default function PopupForm({ isVisible, onClose }: PopupFormProps) {
     useClickOutside(popupRef, onClose);
 
     return isVisible ? (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center max-w-full md:max-h-full">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[9999] max-w-full md:max-h-full">
             <div ref={popupRef} className="bg-[#1b1b1b] text-gray-600 rounded-2xl shadow-lg md:w-[800px] md:h-auto w-full relative">
                 <div className="bg-yellow-general py-4 px-8 rounded-t-2xl">
                     <h3 className="text-2xl text-black font-bold">Booking Form</h3>

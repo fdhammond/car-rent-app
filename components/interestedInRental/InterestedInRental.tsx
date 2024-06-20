@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import ParallaxSection from "../ui/ParallaxSection";
 import BiggerButton from "../ui/BiggerButton";
-import PopupForm from './PopUpForm';
+import PopupForm from '../ui/PopUpForm';
 // Import Swiper React components
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
