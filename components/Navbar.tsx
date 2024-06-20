@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,9 @@ export default function Navbar() {
       <div className="flex flex-col md:flex-row items-center md:items-start justify-between w-full">
         <div className='flex items-center w-full h-[84px] justify-between px-[15px] md:px-0 md:gap-48 py-4'>
           <div className="p-2 md:mr-auto">
-            <Image src="https://utfs.io/f/72a2540d-3386-4094-a4fb-6e063717745e-skwtpw.png" width={130} height={18.3} alt="logo image" />
+            <Link href="/">
+              <Image src="https://utfs.io/f/72a2540d-3386-4094-a4fb-6e063717745e-skwtpw.png" width={130} height={18.3} alt="logo image" />
+            </Link>
           </div>
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">

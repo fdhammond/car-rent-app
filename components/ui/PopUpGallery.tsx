@@ -21,7 +21,7 @@ export default function PopUpGallery({ isVisible, onClose, carImage }: PopUpGall
                         <div className="max-w-full mx-4 my-40">
                             <div ref={imageRef} className="text-gray-600 rounded-2xl shadow-lg overflow-hidden relative">
                                 <div className="flex justify-center">
-                                    <div style={{ maxWidth: 'calc(100vw - 80px)', maxHeight: 'calc(100vh - 80px)' }}>
+                                    <div className="md:max-w-[95vw] md:max-h-[95vh] max-w-full max-h-full">
                                         <Image src={carImage} alt="car" objectFit="contain" className="rounded-2xl" layout="responsive" width={1920} height={1080} />
                                     </div>
                                 </div>

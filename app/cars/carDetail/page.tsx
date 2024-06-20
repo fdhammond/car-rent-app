@@ -12,12 +12,32 @@ import { FaWhatsapp } from "react-icons/fa";
 import { BiCheck } from "react-icons/bi";
 import PopupForm from '@/components/ui/PopUpForm';
 import PopUpGallery from '@/components/ui/PopUpGallery';
+import Accordion from '@/components/ui/Accordion';
 
 interface InfoButtonProps {
     icon: IconType,
     title: string,
     data: string
 }
+
+const rentalConditionsData = [
+    { order: "1", title: "Contract and Annexes", content: "In addition to the car rental contract to be signed at the time of delivery, a credit card is required from our individual customers. We request our commercial customers to submit their company documents (tax plate, signature slip, ID photocopy)." },
+    { order: "2", title: "Driving License and Age", content: "The tenant must be 25 years of age and have a 5-year local or valid international driver's license for group A, B, C, D vehicles at the time of the rental agreement." },
+    { order: "3", title: "Prices", content: "Prices include maintenance and insurance guarantee against third parties (within legal policy limits). 18% VAT (value added tax) is not included. Fuel belongs to the renter. Chauffeur driven service and translator guide are available upon request." },
+    { order: "4", title: "Payments", content: "The total rental fee is collected at the time of rental. The shortest rental period is 72 hours, and in case of delay, 1/3 of the fee is charged for each additional hour. Delays exceeding 3 hours in total are calculated as a full day. A deposit is required from a valid credit card." },
+    { order: "5", title: "Delivery", content: "Delivery is free of charge where our Rent a car company is located. Delivery in these cities is possible with prior notice; hotel, workplace, station, port etc. It can be done in places. For vehicle deliveries and returns in cities where our office is not located, a delivery fee of 0.2 Euro/km is applied, starting from the rented location." },
+    { order: "6", title: "Traffic Fines", content: "Traffic fines toll and illegal toll fees belong to the customer. If the vehicles are detained by traffic, this period is included in the rental period. In necessary cases, we may change these conditions and information and the vehicle type specified in the reservation without prior notice. Our vehicles cannot be taken abroad." },
+    { order: "7", title: "Contract and Annexes", content: "In addition to the car rental contract to be signed at the time of delivery, a credit card is required from our individual customers. We request our commercial customers to submit their company documents (tax plate, signature slip, ID photocopy)." }
+]
+
+const infoButtons = [
+    {icon: GiCarDoor, title: "Doors", data: "4"},
+    {icon: BsPersonFillAdd, title: "Passengers", data: "5"},
+    {icon: TbManualGearboxFilled, title: "Transmission", data: "Auto"},
+    {icon: LuBaggageClaim, title: "Luggage", data: "2 Bags"},
+    {icon: PiThermometerColdBold, title: "Air Condition", data: "Yes"},
+    {icon: IoMdPerson, title: "Age", data: "25"}
+]
 
 function InfoButton({ icon: Icon, title, data }: InfoButtonProps) {
     return (
@@ -88,7 +108,7 @@ export default function CarDetail() {
                     </div>
                 </div>
             </div>
-            <div className='bg-[#1b1b1b] flex flex-wrap justify-center align-center gap-24 pb-[120px]'>
+            <div className='bg-[#1b1b1b] flex flex-wrap justify-center align-center gap-24'>
                 <div className='max-w-[760px] py-[120px] px-4 md:px-0'>
                     <h2 className='text-white text-[21px] font-bold mb-[15px]'>General Information</h2>
                     <p className="text-[14px] text-[#999] font-normal mb-[30px]">
@@ -110,7 +130,7 @@ export default function CarDetail() {
                         />
                     </div>
                     <h2 className="text-[21px] font-bold mb-[15px] text-white">Image Gallery</h2>
-                    <div className="flex justify-start flex-wrap gap-4">
+                    <div className="flex justify-start flex-wrap gap-4 mb-[60px]">
                         <Image
                             src="https://utfs.io/f/f16a8608-55e4-4047-9696-a6b50b3ba45e-pfvyio.jpg"
                             alt="Outside"
@@ -128,42 +148,21 @@ export default function CarDetail() {
                             onClick={() => handleGalleryClick("https://utfs.io/f/35471a57-ff41-46ab-b202-d36131f0cae1-yyww.jpg")}
                         />
                     </div>
+                    <div>
+                        <h2 className="text-[21px] font-bold mb-[15px] text-white">Rental Conditions</h2>
+                        {
+                            rentalConditionsData.map((data, index) => <Accordion key={index} {...data} /> )
+                        }
+                    </div>
                 </div>
                 <div className="mt-[-98px] z-0">
                     <div className='flex items-center justify-center w-[356px] h-auto bg-yellow-general px-[30px] py-[25px] rounded-tr-[20px] rounded-tl-[20px] text-center'>
                         <h2 className="text-[32px] text-black font-bold text-center">$600 <span className='text-[14px] font-normal text-[#1b1b1b]'>/ rent per day</span></h2>
                     </div>
-                    <div className='bg-[#222222] flex flex-col p-[30px] text-[14px] rounded-b-[20px]'>
-                        <InfoButton
-                            icon={GiCarDoor}
-                            title="Doors"
-                            data= "4"
-                        />
-                        <InfoButton
-                            icon={BsPersonFillAdd}
-                            title="Passengers"
-                            data= "5"
-                        />
-                        <InfoButton
-                            icon={TbManualGearboxFilled}
-                            title="Transmission"
-                            data= "Auto"
-                        />
-                        <InfoButton
-                            icon={LuBaggageClaim}
-                            title="Luggage"
-                            data= "2 Bags"
-                        />
-                        <InfoButton
-                            icon={PiThermometerColdBold}
-                            title="Air Condition"
-                            data= "Yes"
-                        />
-                        <InfoButton
-                            icon={IoMdPerson}
-                            title="Age"
-                            data= "25"
-                        />
+                    <div className='bg-[#222222] flex flex-col p-[30px] text-[14px] rounded-b-[20px] mb-[120px]'>
+                        {
+                            infoButtons.map((data, index) => <InfoButton key={index} {...data} />)
+                        }
                         <div className="flex justify-center align-middle items-center mt-[30px] mb-[10px] gap-1 relative text-center">
                             <button onClick={handleRentNowClick} className="bg-yellow-general rounded-l-[30px] p-4 z-0 text-[14px] font-normal text-[#1b1b1b] w-full h-[57px] hover:bg-white">Rent Now</button>
                             <button className="bg-yellow-general rounded-r-[30px] p-4 z-0 text-[14px] font-normal text-[#1b1b1b] w-full h-[57px] flex items-center justify-center gap-[2px] hover:bg-white">
