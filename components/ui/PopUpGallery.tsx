@@ -2,7 +2,13 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { useClickOutside } from '@/hooks/useClickOutside';
 
-export default function PopUpGallery({ isVisible, onClose, carImage }) {
+interface PopUpGalleryProps {
+    isVisible: boolean;
+    onClose: () => void;
+    carImage: string;
+}
+
+export default function PopUpGallery({ isVisible, onClose, carImage }: PopUpGalleryProps) {
     const imageRef = useRef<HTMLDivElement>(null);
 
     useClickOutside(imageRef, onClose);
