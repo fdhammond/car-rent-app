@@ -19,7 +19,7 @@ interface InfoButtonProps {
     data: string
 }
 
-export function InfoButton({ icon: Icon, title, data }: InfoButtonProps) {
+function InfoButton({ icon: Icon, title, data }: InfoButtonProps) {
     return (
         <div className='flex items-center py-[15px]'>
             <div className='bg-[#333333] rounded-full flex items-center justify-center w-[34px] h-[34px] mr-[14px]'>
@@ -31,7 +31,7 @@ export function InfoButton({ icon: Icon, title, data }: InfoButtonProps) {
     )
 }
 
-export function InfoContent({ text }: { text: string }) {
+function InfoContent({ text }: { text: string }) {
     return (
         <div className='flex justify-start items-center mt-[10px]'>
             <div className="bg-[#333333] rounded-full flex items-center justify-center w-[34px] h-[34px] mr-[10px]">
