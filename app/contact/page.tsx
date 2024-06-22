@@ -5,8 +5,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa6";
 import { PiPhoneCallLight } from "react-icons/pi";
 
-
-export function ContactInfo() {
+function ContactInfo() {
     const info = [
         {
             title: "Email us",
