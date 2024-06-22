@@ -36,7 +36,7 @@ export function ContactInfo() {
                 info.map((item, index) => (
                     <div
                         key={index}
-                        className={`flex flex-col items-start justify-center w-[261px] h-[228px] px-[30px] py-[60px] rounded-2xl group transition-transform transition-colors duration-300 ease-in-out
+                        className={`flex flex-col items-start justify-center w-[261px] h-[228px] px-[30px] py-[60px] rounded-2xl group transition-transform duration-300 ease-in-out
                             ${item.selected ? 'bg-yellow-general' : 'bg-[#222] hover:bg-yellow-general'}
                             hover:translate-y-[-10px]`}
                     >
