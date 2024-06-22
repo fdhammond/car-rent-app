@@ -117,11 +117,11 @@ export default function CarFleet() {
                                                 </div>
                                             </div>
                                             <div className='flex justify-center items-center'>
-                                            <button className='flex justify-center items-center text-center text-[14px] text-black-background bg-yellow-general rounded-[20px] px-[14px] py-[21px] w-[86px] h-[50px]'>
-                                                <Link href={`/cars/carDetail`}>
-                                                    Details
-                                                </Link>
-                                            </button>
+                                            <Link href={`/carDetail`}>
+                                                <button className='flex justify-center items-center text-center text-[14px] hover:text-white hover:bg-black text-black-background bg-yellow-general rounded-[20px] px-[14px] py-[21px] w-[86px] h-[50px]'>
+                                                        Details
+                                                </button>
+                                            </Link>
                                                 <div className='flex flex-col justify-center items-center ml-[15px]'>
                                                     <span className='text-[22px] font-bold text-yellow-general'>{car.price}</span>
                                                     <span className='text-[14px] text-gray-400'>/day</span>

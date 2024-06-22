@@ -1,6 +1,7 @@
 import { Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -48,16 +49,18 @@ export default function CarouselThreeBoxesWithButton({ services, serviceButtonIc
                                 { service.topTitle }
                             </span>
                             <p className='text-white-background text-center text-xl absolute inset-x-0 bottom-0 pb-[1.8rem] font-bold'>{service.text}</p>
-                            <span className='absolute inset-x-0 bottom-0 rounded-[50%] text-md text-center bg-yellow-general group-hover:bg-black-background group-hover:text-white-background w-14 h-14 flex items-center justify-center font-bold ml-4 mb-4'>
-                                {
-                                    <>
-                                        <button className='group-hover:text-white'>
-                                            {serviceButtonIcon && serviceButtonIcon}
-                                        </button>
-                                    </>
-                                }
-                                {service.order}
-                            </span>
+                            <Link href={'/carDetail'}>
+                                <span className='absolute inset-x-0 bottom-0 rounded-[50%] text-md text-center bg-yellow-general group-hover:bg-black-background group-hover:text-white-background w-14 h-14 flex items-center justify-center font-bold ml-4 mb-4'>
+                                    {
+                                        <>
+                                                <button className='group-hover:text-white'>
+                                                    {serviceButtonIcon && serviceButtonIcon}
+                                                </button>
+                                        </>
+                                    }
+                                    {service.order}
+                                </span>
+                            </Link>
                         </SwiperSlide>
                     ))
                 }

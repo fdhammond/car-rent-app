@@ -28,7 +28,9 @@ export default function Navbar() {
         <ul className={`md:flex md:items-center md:gap-4 ${isOpen ? 'flex flex-col bg-black w-full h-auto py-8 gap-4 text-sm' : 'hidden'} md:block`}>
           {menuItems.map((item, index) => (
             <li key={index} className="text-white cursor-pointer hover:text-yellow-600 px-4 py-2 md:py-8">
-              {item}
+              <Link href={`/${item.toLowerCase()}`}>
+                {item}
+              </Link>
             </li>
           ))}
         </ul>

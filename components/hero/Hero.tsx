@@ -57,7 +57,7 @@ export default function Hero() {
             animate={{
               opacity: 1,
               y: 0,
-              transition: { delay: 0.3 },
+              transition: { delay: 0.1 },
             }}
             className='flex items-center justify-start absolute ml-[15px] md:ml-8 md:mb-2 md:bottom-6 md:left-[351px] w-full h-full'>
             <div className='flex flex-col'>
@@ -66,7 +66,7 @@ export default function Hero() {
                 animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 0.4 },
+                transition: { delay: 0.2 },
                 }}
                 className='text-[12px] uppercase tracking-[6px] text-yellow-general'>* Premium</motion.p>
               <motion.h1
@@ -74,7 +74,7 @@ export default function Hero() {
                 animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 0.5 },
+                transition: { delay: 0.3 },
                 }}
                 className="text-[42px] md:text-[90px] md:leading-[1em] font-[700] text-white">Rental Car</motion.h1>
               <motion.div
@@ -82,7 +82,7 @@ export default function Hero() {
                 animate={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 0.6 },
+                transition: { delay: 0.4 },
                 }}
                 className='flex items-bottom my-2.5'>
                 <p className='text-[17px] font-[300] text-white'>{car.name}</p>
@@ -93,7 +93,7 @@ export default function Hero() {
                 animate={{
                   opacity: 1,
                   y: 0,
-                  transition: { delay: 0.7 },
+                  transition: { delay: 0.5 },
                 }}
                 className='flex gap-4'>
                 <BiggerButton text="View Details" textColor="text-black"
