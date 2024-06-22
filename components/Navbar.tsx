@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const menuItems = ['Home', 'About', 'Services', 'Cars', 'Contact'];
 
   return (
     <nav className="absolute top-0 left-0 w-full z-10 md:px-[351px]">
@@ -26,13 +25,33 @@ export default function Navbar() {
           </div>
         </div>
         <ul className={`md:flex md:items-center md:gap-4 ${isOpen ? 'flex flex-col bg-black w-full h-auto py-8 gap-4 text-sm' : 'hidden'} md:block`}>
-          {menuItems.map((item, index) => (
-            <li key={index} className="text-white cursor-pointer hover:text-yellow-600 px-4 py-2 md:py-8">
-              <Link href={`/${item.toLowerCase()}`}>
-                {item}
+
+            <li className="text-white cursor-pointer hover:text-yellow-600 px-4 py-2 md:py-8">
+              <Link href={'/'}>
+                Home
               </Link>
             </li>
-          ))}
+            <li className="text-white cursor-pointer hover:text-yellow-600 px-4 py-2 md:py-8">
+              <Link href={'/'}>
+                About
+              </Link>
+            </li>
+            <li className="text-white cursor-pointer hover:text-yellow-600 px-4 py-2 md:py-8">
+              <Link href={'/'}>
+                Services
+              </Link>
+            </li>
+            <li className="text-white cursor-pointer hover:text-yellow-600 px-4 py-2 md:py-8">
+              <Link href={'/carDetail'}>
+                Cars
+              </Link>
+            </li>
+            <li className="text-white cursor-pointer hover:text-yellow-600 px-4 py-2 md:py-8">
+              <Link href={'/contact'}>
+                Contact
+              </Link>
+            </li>
+
         </ul>
       </div>
     </nav>
