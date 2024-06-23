@@ -80,11 +80,11 @@ export default function Contact() {
                     <div className="flex items-center justify-center flex-wrap md:max-w-[400px] md:w-1/2 px-4 md:px-0 mb-[30px]">
                         <h2 className="text-white text-[21px] font-bold mb-[20px]">Get in touch</h2>
                         <form className="">
-                            <input type="text" placeholder="Your Name *" className="md:w-[188px] w-full rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal" />
-                            <input type="email" placeholder="Your Email *" className="md:ml-6 md:w-[188px] w-full rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal" />
-                            <input type="text" placeholder="Your Number *" className="md:w-[188px] w-full rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal" />
-                            <input type="text" placeholder="Subject *" className="md:ml-6 md:w-[188px] w-full rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal" />
-                            <textarea placeholder="Message *" className="rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal w-full h-[121px]"></textarea>
+                            <input type="text" placeholder="Your Name *" className="text-[#999] md:w-[188px] w-full rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal" />
+                            <input type="email" placeholder="Your Email *" className="text-[#999] md:ml-6 md:w-[188px] w-full rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal" />
+                            <input type="text" placeholder="Your Number *" className="text-[#999] md:w-[188px] w-full rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal" />
+                            <input type="text" placeholder="Subject *" className="text-[#999] md:ml-6 md:w-[188px] w-full rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal" />
+                            <textarea placeholder="Message *" className="text-[#999] rounded-[30px] px-[18px] py-[20px] bg-[#222] mb-[15px] text-[14px] font-normal w-full h-[121px]"></textarea>
                             <button className="transition-colors ease-in-out delay-400 hover:bg-white bg-yellow-general text-[14px] font-normal text-[#1b1b1b] rounded-[30px] px-[35px] py-[19px]" type="submit">Send Message</button>
                         </form>
                     </div>

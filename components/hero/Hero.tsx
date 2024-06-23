@@ -1,14 +1,25 @@
 'use client'
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Link from "next/link";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import Image from 'next/image';
 import BiggerButton from '../ui/BiggerButton';
+import PopupForm from "../ui/PopUpForm";
 import { motion } from 'framer-motion';
 import './styles.css'
 
 export default function Hero() {
   const [triggerAnimation, setTriggerAnimation] = useState<boolean>(false);
+  const [isPopupVisible, setIsPopupVisible] = useState<boolean>(false);
+
+  const handleRentNowClick = () => {
+      setIsPopupVisible(true);
+  }
+
+  const handleClosePopup = () => {
+      setIsPopupVisible(false);
+  }
 
   const [sliderRef, internalSlider] = useKeenSlider<HTMLDivElement>({
     loop: true,
@@ -96,19 +107,24 @@ export default function Hero() {
                   transition: { delay: 0.5 },
                 }}
                 className='flex gap-4'>
-                <BiggerButton text="View Details" textColor="text-black"
-                  backgroundColor="bg-yellow-general" showArrowIcon={true} iconSize='text-[10px]'
-                  bgColorOnHover="hover:bg-white-background border-yellow-general"
-                  textColorOnHover="text-black"
-                />
-                <BiggerButton text="Rent Now" textColor="text-white"
-                  showArrowIcon={true} iconSize='text-[10px]' bgColorOnHover="hover:bg-yellow-general hover:border-yellow-general"
-                />
+                <Link href={'/carDetail'}>
+                  <BiggerButton text="View Details" textColor="text-black"
+                    backgroundColor="bg-yellow-general" showArrowIcon={true} iconSize='text-[10px]'
+                    bgColorOnHover="hover:bg-white-background border-yellow-general"
+                    textColorOnHover="text-black"
+                  />
+                </Link>
+                <div onClick={handleRentNowClick}>
+                  <BiggerButton text="Rent Now" textColor="text-white"
+                    showArrowIcon={true} iconSize='text-[10px]' bgColorOnHover="hover:bg-yellow-general hover:border-yellow-general"
+                  />
+                </div>
               </motion.div>
             </div>
           </motion.div>
         </div>
       ))}
+      <PopupForm isVisible={isPopupVisible} onClose={handleClosePopup} />
     </div>
   );
 }
