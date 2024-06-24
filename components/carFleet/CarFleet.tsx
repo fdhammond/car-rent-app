@@ -105,10 +105,10 @@ export default function CarFleet() {
                         cars.map((car, index) => (
                             <SwiperSlide key={index} className="custom-slide flex flex-col px-4 md:px-0">
                                 <Image src={car.imageUrl} width={800} height={450} alt={car.name} className={`md:mb-12 mb-[158px] transform transition duration-300 ease-in-out hover:scale-[1.01]`} />
-                                    <div className={`absolute bottom-0 w-[400px] md:w-[700px] md:h-[100px] bg-[#f2f2f2] rounded-2xl details-section ${activeIndex === index ? 'active' : ''}`}>
+                                    <div className={`absolute bottom-0 w-full md:max-w-[700px] md:h-[100px] bg-[#f2f2f2] rounded-2xl details-section ${activeIndex === index ? 'active' : ''}`}>
                                         <div className='flex flex-col md:flex-row md:justify-between items-start md:items-center w-full h-full px-[25px] py-[25px]'>
                                             <div className='flex flex-col md:pb-0 pb-2.5'>
-                                                <h2 className='text-[22px] font-bold'>{car.name}</h2>
+                                                <h2 className='text-[22px] font-bold text-black'>{car.name}</h2>
                                                 <div className='flex justify-center items-center gap-1.5'>
                                                     <GiCarDoor className='text-[16px] md:ml-2 text-yellow-general'/> <span className='text-[14px] text-gray-400'>{car.seats}</span>
                                                     <TbManualGearboxFilled className='text-[16px] ml-2 text-yellow-general'/> <span className='text-[14px] text-gray-400'>{car.shift}</span>

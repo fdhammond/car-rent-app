@@ -23,7 +23,7 @@ export default function CarDetailCard({ name, seats, shift, bags, price, imageUr
                             <div className={`z-10 flex items-center justify-center w-[400px] md:w-[520px] md:h-[100px] bg-[#f2f2f2] rounded-2xl mt-[-50px]`}>
                                 <div className='flex flex-col md:flex-row md:justify-between items-start md:items-center w-full h-full px-[25px] py-[25px]'>
                                     <div className='flex flex-col md:pb-0 pb-2.5'>
-                                        <h2 className='text-[22px] font-bold'>{name}</h2>
+                                        <h2 className='text-[22px] font-bold text-black'>{name}</h2>
                                         <div className='flex justify-center items-center gap-1.5'>
                                             <GiCarDoor className='text-[16px] md:ml-2 text-yellow-general'/> <span className='text-[14px] text-gray-400'>{seats}</span>
                                             <TbManualGearboxFilled className='text-[16px] ml-2 text-yellow-general'/> <span className='text-[14px] text-gray-400'>{shift}</span>

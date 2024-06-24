@@ -29,7 +29,7 @@ export default function CarRentalProcess() {
                                 {service.paragraph}
                             </span>
                             <div className="md:mt-auto mt-16 pb-4 md:pb-[15px]">
-                                <span className='flex rounded-full text-md text-center bg-white border-yellow-general border-[0.5px] w-12 h-12 md:w-14 md:h-14 items-center justify-center font-bold'>
+                                <span className='flex rounded-full text-md text-center bg-white border-yellow-general text-black border-[0.5px] w-12 h-12 md:w-14 md:h-14 items-center justify-center font-bold'>
                                     {service.order}
                                 </span>
                             </div>
