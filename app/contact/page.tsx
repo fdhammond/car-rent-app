@@ -37,8 +37,7 @@ function ContactInfo() {
                         key={index}
                         className={`flex flex-col items-start justify-center w-[261px] h-[228px] px-[30px] py-[60px] rounded-2xl group transition-transform duration-300 ease-in-out
                             ${item.selected ? 'bg-yellow-general' : 'bg-[#222] hover:bg-yellow-general'}
-                            hover:translate-y-[-10px]`}
-                    >
+                            hover:translate-y-[-10px]`}>
                         <item.Icon className={`${item.selected ? 'text-black' : 'text-yellow-general group-hover:text-black'} w-[35px] h-[35px] mb-[15px]`} />
                         <h2 className={`text-[21px] ${item.selected ? 'text-black' : 'text-white group-hover:text-black'} font-bold`}>{item.title}</h2>
                         <p className={`text-[14px] mt-2 ${item.selected ? 'text-black' : 'text-[#999] group-hover:text-black'}`}>{item.data}</p>
@@ -73,7 +72,8 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-                <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-center mt-[-80px] md:mt-[-100px] gap-8">
+                <div
+                className="relative z-10 w-full flex flex-col md:flex-row items-center justify-center mt-[-80px] md:mt-[-100px] gap-8">
                     <ContactInfo />
                 </div>
                 <div className="w-full py-[120px] flex flex-col items-center md:flex-row justify-center">
