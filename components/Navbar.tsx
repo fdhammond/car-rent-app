@@ -25,7 +25,6 @@ export default function Navbar() {
           </div>
         </div>
         <ul className={`md:flex md:items-center md:gap-4 ${isOpen ? 'flex flex-col bg-black w-full h-auto py-8 gap-4 text-sm' : 'hidden'} md:block`}>
-
             <li className="text-white cursor-pointer hover:text-yellow-600 px-4 py-2 md:py-8">
               <Link href={'/'}>
                 Home
@@ -51,7 +50,6 @@ export default function Navbar() {
                 Contact
               </Link>
             </li>
-
         </ul>
       </div>
     </nav>
